@@ -1,6 +1,6 @@
 # Elemental Quiz - What's Your Personality?
 
-Welcome to **Elemental Quiz**, a captivating React-based personality quiz crafted as the final project for Codédex's React Valley course. Dive into a journey of self-discovery to uncover your elemental affinity—Fire, Water, Earth, or Air—through a series of thought-provoking questions. Each result is paired with a charming dog image from TheDogAPI, reflecting your element’s essence, wrapped in a sleek, responsive interface powered by Tailwind CSS and custom styling. Built with modern React practices, a robust Node.js backend, and an enhanced element determination algorithm, this project showcases both technical prowess and creative flair.
+Welcome to **Elemental Quiz**, a captivating React-based personality quiz crafted as the final project for Codédex's Framework Valley: React course. Dive into a journey of self-discovery to uncover your elemental affinity—Fire, Water, Earth, or Air—through a series of thought-provoking questions. Each result is paired with a charming dog image from TheDogAPI, reflecting your element’s essence, wrapped in a sleek, responsive interface powered by Tailwind CSS and custom styling. Built with modern React practices, a robust Node.js backend, and an enhanced element determination algorithm, this project showcases both technical prowess and creative flair.
 
 ## 🌟 Features
 
@@ -127,7 +127,7 @@ The `determineElement` function uses a weighted scoring system:
 
 ## 🙌 Acknowledgments
 
-- **Codédex**: For the React Valley course and inspiration.
+- **Codédex**: For the Framework Valley: React course and inspiration.
 - **TheDogAPI**: For providing delightful dog images.
 - **Tailwind CSS**: For streamlined, responsive styling.
 
@@ -137,4 +137,4 @@ For feedback or inquiries, reach out to [Your Name] via [your.email@example.com]
 
 ---
 
-*Built with 🐶 and ⚛️ for Codédex React Valley*
+*Built with 🐶 and ⚛️ for Codédex Framework Valley: React*
