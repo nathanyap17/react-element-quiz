@@ -6,7 +6,7 @@ Welcome to **Elemental Quiz**, a captivating React-based personality quiz crafte
 
 - **Interactive Personality Quiz**: Answer three engaging questions to discover your elemental persona, with a compulsory name input for a personalized experience.
 - **DogsAPI Integration**: Fetches delightful dog images tailored to your element (e.g., Huskies for Fire, Labradors for Water) via a Node.js/Express proxy, ensuring seamless API calls.
-- **Enhanced Element Determination**: A sophisticated weighted scoring system prioritizes user preferences, ensuring accurate and meaningful element assignments.
+- **Enhanced Element Determination**: A refined weighted scoring system prioritizes user preferences, ensuring accurate and meaningful element assignments.
 - **Modern React Hooks**: Leverages `useState`, `useEffect`, `useCallback`, `useNavigate`, and `memo` for optimized performance and navigation.
 - **Custom Restart Button**: A dedicated `RestartButton` component, memoized for efficiency, allows users to reset the quiz with a single click.
 - **Personalized Styling**: Combines Tailwind CSS with custom CSS variables and animations (e.g., fade-in effects) for a polished, responsive UI.
@@ -26,7 +26,7 @@ Welcome to **Elemental Quiz**, a captivating React-based personality quiz crafte
 
 | Home Page | Quiz Question | Results Page |
 |-----------|---------------|--------------|
-| ![Home Page](screenshots/home.png) | ![Quiz Question](screenshots/quiz.png) | ![Results Page](screenshots/results.png) |
+| ![Home Page](assets/Home.png) | ![Quiz Question](assets/Quiz.png) | ![Results Page](assets/Results.png) |
 
 ## 🚀 Getting Started
 
@@ -81,10 +81,10 @@ Welcome to **Elemental Quiz**, a captivating React-based personality quiz crafte
    Open `http://localhost:3000` in your browser.
 
 ### Usage
-1. Enter your name on the home page (required).
+1. Enter your name on the home page (required). Without inserting name, you may not be able to access /quiz.
 2. Answer three questions about your preferences (color, vacation spot, valued trait).
 3. Discover your element and view a dog image reflecting your result.
-4. Click the “Restart Quiz” button to start over, resetting all states.
+4. Click the “Restart Quiz” button to start over, resetting all states. At this point, your name is kept tracked unless you manually change your name by clicking /home.
 
 ## 🧠 How It Works
 
@@ -133,7 +133,7 @@ The `determineElement` function uses a weighted scoring system:
 
 ## 📬 Contact
 
-For feedback or inquiries, reach out to [Your Name] via [your.email@example.com] or [GitHub profile](https://github.com/<your-username>).
+For feedback or inquiries, reach out to me via [nathanyap5362@outlook.com] or [GitHub profile](https://github.com/nathanyap17).
 
 ---
 
