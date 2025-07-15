@@ -24,10 +24,6 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +31,220 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+:root {
+  --primary-color: #4a90e2;
+  --primary-hover-color: #357ABD;
+  --primary-gradient: linear-gradient(to right, #4a90e2, #81c7f5);
+  --background-color: #f4f7f6;
+  --text-color: #333;
+  --card-background: #ffffff;
+  --border-color: #ddd;
+}
+
+/* General Styles */
+html {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color); /* Use variable */
+  color: var(--text-color); /* Use variable */ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  background-color: var(--card-background);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin: 0;
+}
+
+header p {
+    margin-top: 5px;
+    margin-bottom: 15px; 
+    font-style: italic;
+    color: #666;
+}
+
+.main-content {
+  /* This pushes the content down so it isn't hidden by the fixed header */
+  padding-top: 20px; 
+  min-height: 300px; 
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.nav {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 10px;  
+}
+
+.nav a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* Form Styles */
+form {
+  max-width: 400px;
+  width: 100%;
+  margin: 20px 0;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+form input {
+  width: 400px;
+  padding: 12px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Add a highlight effect when the user clicks into the input */
+form input:focus {
+  outline: none;
+  border-color: var(--primary-color); 
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2); 
+}
+
+/* Question Styles */
+h2 {
+  text-align: center;
+  width: 100%;
+  margin-top: 30px;
+}
+
+p {
+  text-align: center;
+  width: 100%;
+}
+
+.question-container {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.options-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; 
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.artwork {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.artwork img {
+  max-width: '500px';
+  height: 'auto';
+  border-radius: 10px;
+}
+
+.artwork p {
+  margin: 5px 0;
+  text-align: center;
+}
+
+.reset-btn-ctn {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.artwork-container {
+  min-height: 400px; 
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px; /* Add some space below the artwork */
+}
+
+.artwork-container .artwork {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.6s ease;
+}
+
+.artwork-container .artwork img {
+  max-width: 100%;
+  max-height: 275px; /* Control max image height */
+  height: auto;
+  border-radius: 8px; /* Nice rounded corners */
+}
+
+.artwork-container .loading-text {
+  font-style: italic;
+  color: #666;
+}
+
+/* General Button Styles */
+button {
+  background: var(--primary-gradient); /* Use color variable */
+  color: white; /* Text color for buttons */
+  border: none; /* Remove default border */
+  padding: 15px 25px; /* Adjust padding */
+  margin: 5px;
+  border-radius: 8px; /* Slightly more rounded */
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  background-size: 200% auto;
+  transition: transform 0.2s ease, background-position 0.3s ease;
+
+}
+
+button:hover {
+  background-position: right center;
+  /* Make the button slightly larger on hover */
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0) scale(0.98);
 }
