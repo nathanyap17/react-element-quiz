@@ -1,70 +1,140 @@
-# Getting Started with Create React App
+# Elemental Quiz - What's Your Personality?
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to **Elemental Quiz**, a captivating React-based personality quiz crafted as the final project for Codédex's React Valley course. Dive into a journey of self-discovery to uncover your elemental affinity—Fire, Water, Earth, or Air—through a series of thought-provoking questions. Each result is paired with a charming dog image from TheDogAPI, reflecting your element’s essence, wrapped in a sleek, responsive interface powered by Tailwind CSS and custom styling. Built with modern React practices, a robust Node.js backend, and an enhanced element determination algorithm, this project showcases both technical prowess and creative flair.
 
-## Available Scripts
+## 🌟 Features
 
-In the project directory, you can run:
+- **Interactive Personality Quiz**: Answer three engaging questions to discover your elemental persona, with a compulsory name input for a personalized experience.
+- **DogsAPI Integration**: Fetches delightful dog images tailored to your element (e.g., Huskies for Fire, Labradors for Water) via a Node.js/Express proxy, ensuring seamless API calls.
+- **Enhanced Element Determination**: A sophisticated weighted scoring system prioritizes user preferences, ensuring accurate and meaningful element assignments.
+- **Modern React Hooks**: Leverages `useState`, `useEffect`, `useCallback`, `useNavigate`, and `memo` for optimized performance and navigation.
+- **Custom Restart Button**: A dedicated `RestartButton` component, memoized for efficiency, allows users to reset the quiz with a single click.
+- **Personalized Styling**: Combines Tailwind CSS with custom CSS variables and animations (e.g., fade-in effects) for a polished, responsive UI.
+- **Robust Backend**: Uses Express.js and Axios to handle API requests, bypassing CORS issues for reliable image fetching.
+- **Local Storage**: Persists user names for a seamless experience across sessions.
+- **Fallback Images**: Ensures graceful degradation with local dog images when API calls fail.
 
-### `npm start`
+## 🛠️ Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend**: React, React Router, Tailwind CSS, Custom CSS
+- **Backend**: Node.js, Express.js, Axios
+- **API**: TheDogAPI for dog images
+- **Hooks**: `useState`, `useEffect`, `useCallback`, `useNavigate`, `memo`
+- **Tools**: Vite, ESLint, Git
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📸 Screenshots
 
-### `npm test`
+| Home Page | Quiz Question | Results Page |
+|-----------|---------------|--------------|
+| ![Home Page](screenshots/home.png) | ![Quiz Question](screenshots/quiz.png) | ![Results Page](screenshots/results.png) |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🚀 Getting Started
 
-### `npm run build`
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or Yarn
+- A valid DogsAPI key from [TheDogAPI](https://thedogapi.com)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installation
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/<your-username>/elemental-quiz.git
+   cd elemental-quiz
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Install Frontend Dependencies**:
+   ```bash
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Install Backend Dependencies**:
+   ```bash
+   cd server
+   npm install express axios
+   ```
 
-### `npm run eject`
+4. **Set Up Environment Variables**:
+   Create a `.env` file in the root directory:
+   ```
+   VITE_DOGS_API_KEY=your-dogs-api-key
+   ```
+   Create a `.env` file in the `server` directory:
+   ```
+   DOGS_API_KEY=your-dogs-api-key
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+5. **Add Fallback Images**:
+   Place dog images (`husky.jpg`, `labrador.jpg`, `bulldog.jpg`, `greyhound.jpg`) in `public/images/`.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+6. **Run the Backend**:
+   ```bash
+   cd server
+   node server.js
+   ```
+   The proxy runs on `http://localhost:3001`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+7. **Run the Frontend**:
+   ```bash
+   cd ..
+   npm run dev
+   ```
+   Open `http://localhost:3000` in your browser.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Usage
+1. Enter your name on the home page (required).
+2. Answer three questions about your preferences (color, vacation spot, valued trait).
+3. Discover your element and view a dog image reflecting your result.
+4. Click the “Restart Quiz” button to start over, resetting all states.
 
-## Learn More
+## 🧠 How It Works
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Compulsory Name Input**: A `ProtectedRoute` ensures users enter a name before accessing the quiz.
+- **Weighted Element Determination**: Each question option has weights (e.g., Red 🔴 gives Fire +2, Air +1), tallied to select the highest-scoring element with priority tiebreakers.
+- **DogsAPI Integration**: A Node.js/Express proxy fetches dog images (e.g., Huskies for Fire) using Axios, with fallback images for robustness.
+- **Performance Optimization**: `useCallback` wraps `fetchArtwork`, `determineElement`, and `handleAnswer` to prevent unnecessary renders; `memo` optimizes `RestartButton`.
+- **Responsive Design**: Tailwind CSS and custom styles (`App.css`) ensure a sleek, animated UI across devices.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🐶 DogsAPI Integration
 
-### Code Splitting
+The quiz uses TheDogAPI to fetch dog images matching each element:
+- **Fire**: Husky (energetic, fiery)
+- **Water**: Labrador (water-loving)
+- **Earth**: Bulldog (sturdy, grounded)
+- **Air**: Greyhound (swift, airy)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+A Node.js/Express proxy (`server.js`) handles requests to bypass CORS, using Axios for reliable API calls. Fallback images ensure the UI remains engaging if the API fails.
 
-### Analyzing the Bundle Size
+## 🎨 Personalized Styling
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The UI combines Tailwind CSS for rapid development with custom CSS (`App.css`):
+- **CSS Variables**: Defines `--primary-color`, `--primary-gradient`, etc., for consistent theming.
+- **Animations**: Fade-in effects (`@keyframes fadeIn`) for questions and results.
+- **Responsive Layout**: Card-based design (`max-w-md mx-auto`) with fixed header and centered content.
 
-### Making a Progressive Web App
+## 🔄 Enhanced Element Determination
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The `determineElement` function uses a weighted scoring system:
+- Each question option assigns weights to elements (e.g., Red 🔴: Fire +2, Air +1).
+- Scores are tallied across answers, with priority tiebreakers (Fire > Water > Earth > Air).
+- Ensures accurate, preference-driven results compared to simple vote counting.
 
-### Advanced Configuration
+## 📈 Future Improvements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Add more questions for deeper personality insights.
+- Integrate additional APIs (e.g., Unsplash) for varied visuals.
+- Implement user profiles to save quiz results.
+- Enhance animations with Framer Motion.
 
-### Deployment
+## 🙌 Acknowledgments
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- **Codédex**: For the React Valley course and inspiration.
+- **TheDogAPI**: For providing delightful dog images.
+- **Tailwind CSS**: For streamlined, responsive styling.
 
-### `npm run build` fails to minify
+## 📬 Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+For feedback or inquiries, reach out to [Your Name] via [your.email@example.com] or [GitHub profile](https://github.com/<your-username>).
+
+---
+
+*Built with 🐶 and ⚛️ for Codédex React Valley*
