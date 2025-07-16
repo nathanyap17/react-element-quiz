@@ -35,7 +35,7 @@ A picture is worth a thousand words, but a GIF is worth a million.
 
 ## 🚀 Getting Started
 
-Try this app with just a click-away on ![Vercel](https://react-element-quiz.vercel.app).
+Try this app with just a click-away on [Vercel](https://react-element-quiz.vercel.app).
 
 Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
