@@ -113,7 +113,7 @@ export default function App() {
     async (element) => {
       try {
         // This line stays the same - you are still calling your own backend
-        const searchUrl = `http://localhost:3001/api/artwork?element=${keywords[element]}`;
+        const searchUrl = `/api/artwork?element=${keywords[element]}`;
         const response = await fetch(searchUrl);
 
         if (!response.ok) {
