@@ -95,7 +95,7 @@ header p {
 
 .main-content {
   /* This pushes the content down so it isn't hidden by the fixed header */
-  padding-top: 20px; 
+  padding-top: 180px; 
   min-height: 300px; 
   width: 100%;
   display: flex;
