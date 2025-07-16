@@ -1,140 +1,112 @@
-# Elemental Quiz - What's Your Personality?
+# Elemental Personality Quiz
 
-Welcome to **Elemental Quiz**, a captivating React-based personality quiz crafted as the final project for Codédex's Framework Valley: React course. Dive into a journey of self-discovery to uncover your elemental affinity—Fire, Water, Earth, or Air—through a series of thought-provoking questions. Each result is paired with a charming dog image from TheDogAPI, reflecting your element’s essence, wrapped in a sleek, responsive interface powered by Tailwind CSS and custom styling. Built with modern React practices, a robust Node.js backend, and an enhanced element determination algorithm, this project showcases both technical prowess and creative flair.
+Welcome to the **Elemental Personality Quiz**, a polished and interactive web application designed to reveal your inner element—Fire, Water, Earth, or Air. This project showcases a complete full-stack development cycle, featuring a dynamic React frontend that communicates with a custom Node.js backend proxy.
 
-## 🌟 Features
+The user experience is paramount, with a layout engineered for stability (zero layout shift), smooth CSS animations, and a responsive design that feels great on any device. What started as a simple quiz evolved into a demonstration of solving real-world development challenges like Cross-Origin Resource Sharing (CORS) and creating a seamless, professional user interface.
 
-- **Interactive Personality Quiz**: Answer three engaging questions to discover your elemental persona, with a compulsory name input for a personalized experience.
-- **DogsAPI Integration**: Fetches delightful dog images tailored to your element (e.g., Huskies for Fire, Labradors for Water) via a Node.js/Express proxy, ensuring seamless API calls.
-- **Enhanced Element Determination**: A refined weighted scoring system prioritizes user preferences, ensuring accurate and meaningful element assignments.
-- **Modern React Hooks**: Leverages `useState`, `useEffect`, `useCallback`, `useNavigate`, and `memo` for optimized performance and navigation.
-- **Custom Restart Button**: A dedicated `RestartButton` component, memoized for efficiency, allows users to reset the quiz with a single click.
-- **Personalized Styling**: Combines Tailwind CSS with custom CSS variables and animations (e.g., fade-in effects) for a polished, responsive UI.
-- **Robust Backend**: Uses Express.js and Axios to handle API requests, bypassing CORS issues for reliable image fetching.
-- **Local Storage**: Persists user names for a seamless experience across sessions.
-- **Fallback Images**: Ensures graceful degradation with local dog images when API calls fail.
+## ✨ Live Demo & Preview
 
-## 🛠️ Tech Stack
+A picture is worth a thousand words, but a GIF is worth a million.
 
-- **Frontend**: React, React Router, Tailwind CSS, Custom CSS
-- **Backend**: Node.js, Express.js, Axios
-- **API**: TheDogAPI for dog images
-- **Hooks**: `useState`, `useEffect`, `useCallback`, `useNavigate`, `memo`
-- **Tools**: Vite, ESLint, Git
+*(Suggestion: Record a short GIF of your app in action using a tool like Giphy Capture or ScreenToGif and replace the placeholder below!)*
 
-## 📸 Screenshots
+`![Demo GIF of the Elemental Quiz App in action](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnZhbTMwajB0azZ2MTF5d3RzZHR4YTRzempsb3ZzdjNwbnBnOXl3eiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2spvqy8r8WYCFdf4NH/giphy.gif)`
 
 | Home Page | Quiz Question | Results Page |
 |-----------|---------------|--------------|
 | ![Home Page](assets/Home.png) | ![Quiz Question](assets/Quiz.png) | ![Results Page](assets/Results.png) |
 
+## 🌟 Key Features
+
+- **Interactive Quiz Flow**: A multi-step quiz that guides the user from entering their name to discovering their elemental result.
+- **Stable UI with Zero Layout Shift**: The header is fixed and content areas have a reserved minimum height, preventing the jarring "jump" of elements as content loads, ensuring a smooth user experience.
+- **Dynamic CSS Transitions & Animations**: Buttons are interactive with gradient hover effects, and new components gracefully fade in, creating a polished and modern feel.
+- **Backend Proxy Server (Node.js & Express)**: A custom backend server that acts as a proxy to communicate with the Dog API, completely solving potential CORS issues.
+- **Keyless API Integration**: Utilizes the free and open [dog.ceo API](https://dog.ceo/dog-api/) to fetch images, demonstrating the ability to work with external services without exposing credentials.
+- **Centralized & Customizable Styling**: A single `App.css` file uses CSS Variables (`:root`) for easy theming, allowing the entire app's color scheme (including gradients) to be changed in one place.
+- **Protected Routing**: The quiz page is protected, ensuring a user must provide a name before proceeding.
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React, React Router, Custom CSS3 (with Flexbox and Animations)
+- **Backend**: Node.js, Express.js, Axios
+- **API**: The Dog API (`dog.ceo`)
+- **Development Environment**: Create React App, Node.js
+
 ## 🚀 Getting Started
 
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
+
 ### Prerequisites
-- Node.js (v16 or higher)
-- npm or Yarn
-- A valid DogsAPI key from [TheDogAPI](https://thedogapi.com)
+- Node.js (v16 or higher is recommended)
+- npm (comes bundled with Node.js)
 
 ### Installation
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/<your-username>/elemental-quiz.git
-   cd elemental-quiz
-   ```
 
-2. **Install Frontend Dependencies**:
-   ```bash
-   npm install
-   ```
+**Important:** This project contains two parts: a frontend client and a backend server. You will need to run them in two separate terminal windows.
 
-3. **Install Backend Dependencies**:
-   ```bash
-   cd server
-   npm install express axios
-   ```
+1.  **Clone the Repository**:
+    ```bash
+    git clone https://github.com/<your-username>/elemental-quiz.git
+    cd elemental-quiz
+    ```
 
-4. **Set Up Environment Variables**:
-   Create a `.env` file in the root directory:
-   ```
-   VITE_DOGS_API_KEY=your-dogs-api-key
-   ```
-   Create a `.env` file in the `server` directory:
-   ```
-   DOGS_API_KEY=your-dogs-api-key
-   ```
+2.  **Install Frontend Dependencies**:
+    In the root directory (`/elemental-quiz`), run:
+    ```bash
+    npm install
+    ```
 
-5. **Add Fallback Images**:
-   Place dog images (`husky.jpg`, `labrador.jpg`, `bulldog.jpg`, `greyhound.jpg`) in `public/images/`.
+3.  **Install Backend Dependencies**:
+    Navigate into the server directory and install its dependencies.
+    ```bash
+    cd server
+    npm install
+    ```
 
-6. **Run the Backend**:
-   ```bash
-   cd server
-   node server.js
-   ```
-   The proxy runs on `http://localhost:3001`.
+4.  **No Environment Variables Needed!**
+    This project uses a keyless API, so no `.env` files or API keys are required.
 
-7. **Run the Frontend**:
-   ```bash
-   cd ..
-   npm run dev
-   ```
-   Open `http://localhost:3000` in your browser.
+### Running the Application
 
-### Usage
-1. Enter your name on the home page (required). Without inserting name, you may not be able to access /quiz.
-2. Answer three questions about your preferences (color, vacation spot, valued trait).
-3. Discover your element and view a dog image reflecting your result.
-4. Click the “Restart Quiz” button to start over, resetting all states. At this point, your name is kept tracked unless you manually change your name by clicking /home.
+1.  **Start the Backend Server**:
+    In the `/server` directory, run:
+    ```bash
+    node index.js
+    ```
+    You should see the confirmation message: `✅ Server is running on port: 3001`
 
-## 🧠 How It Works
+2.  **Start the Frontend Application**:
+    Open a **new terminal window**. Navigate back to the root directory (`/elemental-quiz`) and run:
+    ```bash
+    npm start
+    ```
+    This will open the application in your browser at `http://localhost:3000`. The frontend will automatically proxy its API requests to the backend server running on port 3001.
 
-- **Compulsory Name Input**: A `ProtectedRoute` ensures users enter a name before accessing the quiz.
-- **Weighted Element Determination**: Each question option has weights (e.g., Red 🔴 gives Fire +2, Air +1), tallied to select the highest-scoring element with priority tiebreakers.
-- **DogsAPI Integration**: A Node.js/Express proxy fetches dog images (e.g., Huskies for Fire) using Axios, with fallback images for robustness.
-- **Performance Optimization**: `useCallback` wraps `fetchArtwork`, `determineElement`, and `handleAnswer` to prevent unnecessary renders; `memo` optimizes `RestartButton`.
-- **Responsive Design**: Tailwind CSS and custom styles (`App.css`) ensure a sleek, animated UI across devices.
+## 🧠 Architectural Highlights
 
-## 🐶 DogsAPI Integration
-
-The quiz uses TheDogAPI to fetch dog images matching each element:
-- **Fire**: Husky (energetic, fiery)
-- **Water**: Labrador (water-loving)
-- **Earth**: Bulldog (sturdy, grounded)
-- **Air**: Greyhound (swift, airy)
-
-A Node.js/Express proxy (`server.js`) handles requests to bypass CORS, using Axios for reliable API calls. Fallback images ensure the UI remains engaging if the API fails.
-
-## 🎨 Personalized Styling
-
-The UI combines Tailwind CSS for rapid development with custom CSS (`App.css`):
-- **CSS Variables**: Defines `--primary-color`, `--primary-gradient`, etc., for consistent theming.
-- **Animations**: Fade-in effects (`@keyframes fadeIn`) for questions and results.
-- **Responsive Layout**: Card-based design (`max-w-md mx-auto`) with fixed header and centered content.
-
-## 🔄 Enhanced Element Determination
-
-The `determineElement` function uses a weighted scoring system:
-- Each question option assigns weights to elements (e.g., Red 🔴: Fire +2, Air +1).
-- Scores are tallied across answers, with priority tiebreakers (Fire > Water > Earth > Air).
-- Ensures accurate, preference-driven results compared to simple vote counting.
+- **Client-Server Architecture**: The application is cleanly separated into a React client that manages the user interface and state, and a Node.js server whose sole responsibility is to handle external API requests.
+- **Solving CORS with a Proxy**: The browser's same-origin policy prevents a frontend on `localhost:3000` from directly calling an external API. The Node.js server acts as a trusted proxy. The frontend makes a safe request to its own backend (`/api/artwork`), which then securely calls the external Dog API on the server-side, bypassing all browser CORS restrictions.
+- **Preventing Cumulative Layout Shift (CLS)**: The `header` is styled with `position: fixed` to remove it from the document flow, ensuring it never moves. The main content area has a `min-height`, creating a stable "stage" so that content loading (like questions or results) doesn't push the layout around.
 
 ## 📈 Future Improvements
 
 - Add more questions for deeper personality insights.
-- Integrate additional APIs (e.g., Unsplash) for varied visuals.
-- Implement user profiles to save quiz results.
-- Enhance animations with Framer Motion.
+- Allow users to select from different image APIs (e.g., Unsplash for landscapes, Cat API).
+- Implement user profiles to save quiz history and results.
+- Enhance animations with a dedicated library like Framer Motion for more complex page transitions.
 
 ## 🙌 Acknowledgments
 
-- **Codédex**: For the Framework Valley: React course and inspiration.
-- **TheDogAPI**: For providing delightful dog images.
-- **Tailwind CSS**: For streamlined, responsive styling.
+- **Codédex**: For providing the excellent Framework Valley: React course that inspired this project.
+- **The Dog API**: For their fun, free, and easy-to-use image API.
 
 ## 📬 Contact
 
-For feedback or inquiries, reach out to me via [nathanyap5362@outlook.com] or [GitHub profile](https://github.com/nathanyap17).
+Your Name – [LinkedIn](https://www.linkedin.com/in/nathan-yap-jia-de-8b1836368) 
+
+Project Link: [https://github.com/nathanyap17/elemental-quiz](https://github.com/nathanyap17/elemental-quiz)
 
 ---
 
-*Built with 🐶 and ⚛️ for Codédex Framework Valley: React*
+*Built with passion, a dash of ⚛️, and a lot of 🐶 for the Codédex Framework Valley course.*
