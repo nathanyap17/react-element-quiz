@@ -10,7 +10,7 @@ A picture is worth a thousand words, but a GIF is worth a million.
 
 *(Suggestion: Record a short GIF of your app in action using a tool like Giphy Capture or ScreenToGif and replace the placeholder below!)*
 
-`![Demo GIF of the Elemental Quiz App in action](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnZhbTMwajB0azZ2MTF5d3RzZHR4YTRzempsb3ZzdjNwbnBnOXl3eiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2spvqy8r8WYCFdf4NH/giphy.gif)`
+`![Demo GIF of the Elemental Quiz App in action](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjlsNWExcHluMmhvZWppNnprdzJtbnZicWRwc3Z6cGJieXIwNmlidSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2spvqy8r8WYCFdf4NH/giphy.gif)`
 
 | Home Page | Quiz Question | Results Page |
 |-----------|---------------|--------------|
