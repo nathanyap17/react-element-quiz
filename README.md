@@ -7,7 +7,10 @@ The user experience is paramount, with a layout engineered for stability (zero l
 ## ✨ Live Demo & Preview
 
 A picture is worth a thousand words, but a GIF is worth a million.
-![Demo GIF of the Elemental Quiz App in action](assets/Preview.gif)
+
+<div align="center">
+  <img src="assets/Preview.gif" alt="Demo GIF of the Elemental Quiz App in action" width="700" />
+</div>
 
 | Home Page | Quiz Question | Results Page |
 |-----------|---------------|--------------|
@@ -31,6 +34,8 @@ A picture is worth a thousand words, but a GIF is worth a million.
 - **Development Environment**: Create React App, Node.js
 
 ## 🚀 Getting Started
+
+Try this app with just a click-away on ![Vercel](https://react-element-quiz.vercel.app/).
 
 Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
