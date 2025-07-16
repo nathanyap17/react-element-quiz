@@ -7,9 +7,6 @@ The user experience is paramount, with a layout engineered for stability (zero l
 ## ✨ Live Demo & Preview
 
 A picture is worth a thousand words, but a GIF is worth a million.
-
-*(Suggestion: Record a short GIF of your app in action using a tool like Giphy Capture or ScreenToGif and replace the placeholder below!)*
-
 ![Demo GIF of the Elemental Quiz App in action](assets/Preview.gif)
 
 | Home Page | Quiz Question | Results Page |
